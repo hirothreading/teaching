@@ -5,8 +5,9 @@
 rm(list=ls(all=TRUE));
 graphics.off();
 
+# set working directory according to your computer and file location:
+# setwd("");
 getwd();
-setwd("/Users/hiro/Documents/Oxford 2021-22/St Hildas College/Prelims Metrics and Maths/20220218 Metrics Lab");
 
 x=2
 y=5

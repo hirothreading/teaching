@@ -27,7 +27,7 @@ phiy = 0.5
 pibar = 2;
 rbar = 2;
 
-# need to construct Y tilde (percent deviation from steady state)
+# need to construct Yhat (percent deviation from steady state)
 names(usdata); # double check column names
 Yhat = 100*(GDP-GDPPOT)/GDPPOT;
 # plot(Yhat); #can quickly check the data
@@ -55,6 +55,21 @@ plot.ts(i_TR_ts,main="Taylor Rule Interest Rate (Core; CPI) vs Effective Federal
 lines(i_TR_CPI_ts,col="green");
 lines(EFFR_ts,col="red");
 legend("topright",legend=c("Taylor Rule (Core)","Taylor Rule (CPI)","EFFR"),col=c("blue","green","red"),lty=c(1,1,1),ncol=1);
+
+
+### Not part of the problem set ###
+# We could even try and estimate ibar, phipi, and phiy using OLS estimation:
+TR_core = glm(EFFR ~ COREINF + Yhat);
+summary(TR_core);
+TR_CPI = glm(EFFR ~ CPIINF + Yhat);
+summary(TR_CPI);
+# How do these estimate results compare with the ibar, phipi, and phiy values we assumed?
+# What part of the Taylor Rule, when estimated with CPI inflation, violates macroeconomic theory?
+
+
+
+
+
 
 
 

@@ -39,7 +39,7 @@ plot.ts(gdp_ts,main="US Log Real GDP",ylab=NULL,xlab=NULL,col=2);
 quartz();
 plot.ts(gdp_hat_ts,main="US Log Real GDP (%ch.)",ylab=NULL,xlab=NULL,col=4);
 abline(h=0);
-# can put them on the same plot
+# can put them on the same window
 quartz();
 par(mfrow=c(2,1),mar=c(2,2,2,1));
 plot.ts(gdp_ts,main="US Log Real GDP",ylab=NULL,xlab=NULL,col=2);

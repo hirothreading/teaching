@@ -14,7 +14,7 @@ library(quantmod);
 library(xts);
 
 # set working directory accordingly for your computer:
-setwd("/Users/hiro/Documents/GitHub/Teaching/Oxford Prelims Economics/Macroeconomics");
+# setwd();
 getwd();
 
 # import data

@@ -14,7 +14,7 @@ library(quantmod);
 library(xts);
 
 # set working directory accordingly for your computer:
-# setwd("");
+# setwd();
 getwd();
 
 # import data
@@ -27,7 +27,7 @@ d_log_gdp = diff(log_gdp);
 gdp_hat = 100*d_log_gdp;
 gdp_hat = as.matrix(gdp_hat);
 gdp_hat = c(0,gdp_hat);
-gdp_hat = gdp_hat - mean(gdp_hat); 
+gdp_hat = gdp_hat - mean(gdp_hat); #demean this series
 
 # create time series
 gdp_ts = ts(log_gdp,start=c(1947,1),frequency=4);
